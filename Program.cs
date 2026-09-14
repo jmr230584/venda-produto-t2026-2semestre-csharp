@@ -1,23 +1,19 @@
-var builder = WebApplication.CreateBuilder(args);
+using LojaApi.Data;
 
-// Add services to the container.
+WebApplicationBuilder builder =
+    WebApplication.CreateBuilder(args);
 
+// Habilita o uso de Controllers.
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
 
-var app = builder.Build();
+// Registra a classe de conexão para que o ASP.NET Core
+// possa fornecê-la ao ConexaoController.
+builder.Services.AddSingleton<ConexaoBanco>();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
+WebApplication app = builder.Build();
 
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
+// Disponibiliza as rotas declaradas nos Controllers.
 app.MapControllers();
 
+// Inicia a aplicação.
 app.Run();
