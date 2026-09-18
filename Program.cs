@@ -35,7 +35,7 @@ await app.StartAsync();
 // A rota de teste será a última linha impressa neste bloco.
 Console.WriteLine();
 Console.WriteLine("Listar vendas: http://localhost:5037/api/vendas");
-Console.WriteLine("http://localhost:5037/api/conexao");
+Console.WriteLine("http://localhost:5037/api/conexao/testar");
 
 // Mantém a API em execução até o encerramento com Ctrl + C.
 await app.WaitForShutdownAsync();
