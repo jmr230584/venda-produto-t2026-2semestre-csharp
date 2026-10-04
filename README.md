@@ -2,7 +2,7 @@
 
 Este documento apresenta os passos necessários para baixar o projeto do GitHub, configurar o ambiente local, preparar o banco de dados PostgreSQL e executar a API.
 
-> Atenção: este projeto utiliza uma string de conexão com o PostgreSQL. A senha utilizada no seu computador deve permanecer somente no seu ambiente local e não deve ser enviada para o GitHub.
+> Atenção: este projeto utiliza uma string de conexão com o PostgreSQL. A senha utilizada no seu computador deve permanecer somente no seu ambiente local e não deve ser enviada para o GitHub (ConnectionStrings do professor foi compartilhada no repositório para fins educacionais, MAS VOCÊS ALUNOS, COMO DESENVOLVEDORES, NUNCA FAÇAM ISSO).
 
 ---
 
@@ -39,17 +39,20 @@ git --version
 ---
 
 ## 2. Clonar o projeto
+Execute somente um dos métodos
+
+# 2.1 Método 1 para clonar
 
 Abra o terminal no diretório em que deseja armazenar o projeto e execute:
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone URL_DO_REPOSITORIO 
 ```
 
 Exemplo:
 
 ```bash
-git clone https://github.com/usuario/repositorio.git
+git clone https://github.com/usuario/repositorio.git 
 ```
 
 Depois, entre na pasta do projeto:
@@ -57,8 +60,16 @@ Depois, entre na pasta do projeto:
 ```bash
 cd LojaApi
 ```
+# 2.2 Método 2 para clonar
+Caso queira que o projeto seja clonado direto no diretório raiz (o método de clone acima cria dentro do diretório raiz, um diretório chamado LojaApi), utilize o mesmo comando porém adiciono um "." no final, segue o que é preciso fazer:
 
-Abra o projeto no Visual Studio Code:
+Abra o terminal no diretório em que deseja armazenar o projeto e execute:
+
+git clone https://github.com/usuario/repositorio.git .
+
+
+# 2.3 ... continuação depois da escolha de um dos dois métodos
+Agora abra o projeto no Visual Studio Code:
 
 ```bash
 code .
